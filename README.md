@@ -1,4 +1,1 @@
-Backend BookingCare
-Technology:
-Node.js (Express) 
-MySql (Sequelize)
+Technology: Node.js (Express) + MySql (Sequelize)
