@@ -81,15 +81,15 @@ The backend server will run at:
 
 1. Database not connecting
 
-• Check your .env configuration
+    • Check your .env configuration
 
-• Ensure MySQL server is running
+    • Ensure MySQL server is running
 
 2. API not responding
 
-• Verify endpoint URLs in routes/
+    • Verify endpoint URLs in routes/
 
-• Use tools like Postman to test responses
+    • Use tools like Postman to test responses
 
 
 
