@@ -1,75 +1,96 @@
-# Đặt lịch khám bệnh - Backend
+🏥 Doctor Appointment Booking - Backend
 
-## Giới Thiệu
-Đây là phần backend của trang web "Đặt lịch khám bệnh", được xây dựng bằng **Node.js** với **Express** và kết nối với cơ sở dữ liệu **MySQL** để quản lý thông tin bệnh nhân, bác sĩ, cơ sở y tế và lịch khám.
+📌 Overview
+This is the backend of the "Doctor Appointment Booking" web application. It is built using Node.js with Express, and connects to a MySQL database to manage data related to patients, doctors, clinics, and appointment schedules.
 
-## Công Nghệ Sử Dụng
-- **Node.js**: Môi trường chạy JavaScript phía server.
-- **Express**: Framework giúp xây dựng các API và xử lý routing.
-- **MySQL**: Cơ sở dữ liệu quan hệ để lưu trữ thông tin.
-- **Sequelize**: ORM giúp kết nối và thao tác với cơ sở dữ liệu MySQL.
+⚙️ Technologies Used
 
-## Hướng Dẫn Cài Đặt
+Node.js: JavaScript runtime environment for building server-side applications.
 
-1. Clone repository về máy:
-   ```bash
-   git clone https://github.com/username/backend-repo.git
+Express: Web framework for handling APIs and routing.
 
-2. Cài đặt các phụ thuộc:
-  cd frontend-repo
-  npm install
+MySQL: Relational database for storing application data.
 
-3. Cấu hình môi trường:
+Sequelize: ORM for interacting with the MySQL database.
 
-  • Sao chép tệp .env.example và tạo tệp .env trong thư mục gốc (cùng cấp với .env.example).
+🚀 Installation Guide
 
-  • Cập nhật các biến môi trường trong tệp .env:
+1. Clone the repository:
 
-    • DB_USERNAME: Tên người dùng cơ sở dữ liệu (mặc định là root).
+    git clone https://github.com/username/backend-repo.git
 
-    • DB_PASSWORD: Mật khẩu của cơ sở dữ liệu.
+2. Install dependencies:
 
-    • MAIL_USERNAME: Email của bạn.
+    cd backend-repo
 
-    • MAIL_PASSWORD: Mật khẩu ứng dụng email (chứ không phải mật khẩu email chính).
+    npm install
 
-4. Cấu hình cơ sở dữ liệu:
+3. Environment setup:
 
-    • Tạo cơ sở dữ liệu MySQL bằng cách chạy tệp database.sql trong MySQL Workbench hoặc PHPMyAdmin. Nó sẽ tự động tạo một schema mới có tên doctorcare trong cơ sở dữ liệu của bạn.
+• Copy the .env.example file and create a new file named .env in the root folder.
 
-5. Chạy trang web:
+• Update the following environment variables in the .env file:
 
-  npm start
+    DB_USERNAME     // Your MySQL username (default: root)
 
-Server sẽ chạy ở http://localhost:8080.
+    DB_PASSWORD     // Your MySQL password
 
-# Các API Endpoints
-• GET /api/doctors: Lấy danh sách bác sĩ.
+    MAIL_USERNAME   // Your email address
 
-• POST /api/appointments: Đặt lịch khám với bác sĩ.
+    MAIL_PASSWORD   // App-specific password (not your email login password)
 
-• GET /api/appointments: Lấy tất cả lịch khám của bệnh nhân.
+To generate a mail app password (Gmail):
 
-• GET /api/patients: Lấy thông tin bệnh nhân.
+    https://myaccount.google.com/apppasswords
 
-# Cấu Trúc Thư Mục
+4. Database setup:
 
-• controllers/: Chứa các controller xử lý logic cho các API.
+• Use MySQL Workbench or PHPMyAdmin to run the database.sql file located in the database/ folder.
 
-• models/: Các mô hình dữ liệu (ví dụ: User, Doctor, Appointment).
+• This will automatically create a schema named doctorcare.
 
-• routes/: Các định tuyến API.
+5. Run the server:
 
-• config/: Cấu hình cơ sở dữ liệu và các thiết lập khác.
+    npm start
 
-# Lỗi Thường Gặp
-1. Cơ sở dữ liệu không kết nối:
+The backend server will run at:
 
-  • Kiểm tra lại cấu hình MySQL URI và đảm bảo rằng MySQL server đang chạy.
+    📍 http://localhost:8080
+    
+📚 API Endpoints
 
-2. API không trả về kết quả:
+• GET /api/doctors — Get list of doctors
 
-  • Kiểm tra các endpoint trong routes để đảm bảo chính xác.
+• POST /api/appointments — Book an appointment
+
+• GET /api/appointments — Get patient’s appointment list
+
+• GET /api/patients — Get patient information
+
+📁 Project Structure
+
+    📂 controllers/   // Handles business logic for APIs
+
+    📂 models/        // Sequelize models (User, Doctor, Appointment)
+
+    📂 routes/        // Defines API endpoints and routes
+
+    📂 config/        // Database config and other settings
+
+🐞 Common Issues
+
+1. Database not connecting
+
+• Check your .env configuration
+
+• Ensure MySQL server is running
+
+2. API not responding
+
+• Verify endpoint URLs in routes/
+
+• Use tools like Postman to test responses
+
 
 
 
