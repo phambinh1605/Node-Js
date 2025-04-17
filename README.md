@@ -1,8 +1,3 @@
----
-
-### README cho **Backend** (Node.js + Express + MySQL)
-
-```markdown
 # Đặt lịch khám bệnh - Backend
 
 ## Giới Thiệu
@@ -25,17 +20,25 @@
   npm install
 
 3. Cấu hình môi trường:
+
   • Sao chép tệp .env.example và tạo tệp .env trong thư mục gốc (cùng cấp với .env.example).
+
   • Cập nhật các biến môi trường trong tệp .env:
+
     • DB_USERNAME: Tên người dùng cơ sở dữ liệu (mặc định là root).
+
     • DB_PASSWORD: Mật khẩu của cơ sở dữ liệu.
+
     • MAIL_USERNAME: Email của bạn.
+
     • MAIL_PASSWORD: Mật khẩu ứng dụng email (chứ không phải mật khẩu email chính).
 
 4. Cấu hình cơ sở dữ liệu:
-  • Tạo cơ sở dữ liệu MySQL bằng cách chạy tệp database.sql trong MySQL Workbench hoặc PHPMyAdmin. Nó sẽ tự động tạo một schema mới có tên doctorcare trong cơ sở dữ liệu của bạn.
+
+    • Tạo cơ sở dữ liệu MySQL bằng cách chạy tệp database.sql trong MySQL Workbench hoặc PHPMyAdmin. Nó sẽ tự động tạo một schema mới có tên doctorcare trong cơ sở dữ liệu của bạn.
 
 5. Chạy trang web:
+
   npm start
 
 Server sẽ chạy ở http://localhost:8080.
@@ -50,6 +53,7 @@ Server sẽ chạy ở http://localhost:8080.
 • GET /api/patients: Lấy thông tin bệnh nhân.
 
 # Cấu Trúc Thư Mục
+
 • controllers/: Chứa các controller xử lý logic cho các API.
 
 • models/: Các mô hình dữ liệu (ví dụ: User, Doctor, Appointment).
@@ -66,7 +70,6 @@ Server sẽ chạy ở http://localhost:8080.
 2. API không trả về kết quả:
 
   • Kiểm tra các endpoint trong routes để đảm bảo chính xác.
-
 
 
 
